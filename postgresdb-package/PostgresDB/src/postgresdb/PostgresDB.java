@@ -28,7 +28,23 @@ public class PostgresDB {
         
         
     }
-
+    
+    public static void setDBUrlPort(String url, String port) {
+    
+        db_url = url;
+        db_port = port;
+    }
+    
+    public static void setDBName(String name) {
+        
+        db_name = name;
+    }
+    
+    public static void setUsernamePassword(String username, String password) {
+    
+        db_username = username;
+        db_password = password;
+    }
     
     public static void testInsertRecord() {
     
