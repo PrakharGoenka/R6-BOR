@@ -28,6 +28,7 @@ public class PostgresDB {
         
         
     }
+
     
     public static void testInsertRecord() {
     
@@ -155,6 +156,51 @@ public class PostgresDB {
         }
         
         return rs;
+    }
+    
+    public static HashMap<String, String> retrieveRecord(int serial_number) {
+    
+        HashMap<String, String> record = new HashMap<>();
+        String SQL = "SELECT * FROM Register6 where sno = (?);";
+        
+        Connection conn = DatabaseConnect();
+        
+        try {
+        
+            PreparedStatement pstmt = conn.prepareStatement(SQL);
+            
+            pstmt.setInt(1, serial_number);
+            ResultSet rs = retrieveData(pstmt);
+            
+            rs.next();
+            int sno = rs.getInt(1);
+            String district = rs.getString(2);
+            String tehsil = rs.getString(3);
+            String village = rs.getString(4);
+            String share_added = rs.getString(5);
+            String share_removed = rs.getString(6);
+            String mall_guzari = rs.getString(7);
+            String order_number = rs.getString(8);
+            String date = rs.getString(9);
+            String remark = rs.getString(10);
+            
+            record.put("sno", Integer.toString(sno));
+            record.put("district", district);
+            record.put("tehsil", tehsil);
+            record.put("village", village);
+            record.put("share_added", share_added);
+            record.put("share_removed", share_removed);
+            record.put("mall_guzari", mall_guzari);
+            record.put("order_number", order_number);
+            record.put("date", date);
+            record.put("remark", remark);
+            
+        }
+        catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        
+        return record;
     }
     
     public static void InitializeDatabase() {
