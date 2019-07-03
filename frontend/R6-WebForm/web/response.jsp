@@ -1,4 +1,7 @@
 <%@ page import="postgresdb.PostgresDB" %>
+<%@ page import="java.sql.*" %>
+<%@ page import="org.postgresql.Driver" %>
+
 <%@ page import="java.util.HashMap" %>
 <%@ page contentType="text/html" pageEncoding="UTF-8"%>
 
@@ -36,17 +39,17 @@
 
     <% HashMap<String, String> h = new HashMap();
       out.print(request.getParameter("District"));
-      h.put("District", request.getParameter("District"));
-      h.put("Tehsil", request.getParameter("Tehsil"));
-      h.put("Village", request.getParameter("Village"));
-      h.put("Share_Added", request.getParameter("DescShareAdded"));
-      h.put("Share_Removed", request.getParameter("DescShareRemoved"));
-      h.put("Mall_Guzari", request.getParameter("MallGuzari"));
+      h.put("district", request.getParameter("District"));
+      h.put("tehsil", request.getParameter("Tehsil"));
+      h.put("village", request.getParameter("Village"));
+      h.put("share_added", request.getParameter("DescShareAdded"));
+      h.put("share_removed", request.getParameter("DescShareRemoved"));
+      h.put("mall_guzari", request.getParameter("MallGuzari"));
       h.put("order_number", request.getParameter("OrderNumber"));
       h.put("data", request.getParameter("Data"));
-      h.put("Remark", request.getParameter("Remark"));
+      h.put("remark", request.getParameter("Remark"));
       out.print(h);
-      //PostgresDB.InitializeDatabase();
+      PostgresDB.InitializeDatabase();
 %>
 
     <main class="page hire-me-page">
