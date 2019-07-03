@@ -1,0 +1,77 @@
+{
+  "DATA": [
+    {
+      "district": {
+        "district_code_census": "146",
+        "district_name_hindi": "आगरा",
+        "district_name": "Agra"
+      },
+      "tehsil": {
+        "tehsil_code_census": "00766",
+        "tname": "आगरा",
+        "tname_eng": "Agra"
+      }
+    },
+    {
+      "district": {
+        "district_code_census": "146",
+        "district_name_hindi": "आगरा",
+        "district_name": "Agra"
+      },
+      "tehsil": {
+        "tehsil_code_census": "00770",
+        "tname": "बाह",
+        "tname_eng": "Bah"
+      }
+    },
+    {
+      "district": {
+        "district_code_census": "146",
+        "district_name_hindi": "आगरा",
+        "district_name": "Agra"
+      },
+      "tehsil": {
+        "tehsil_code_census": "00765",
+        "tname": "एत्मादपुर",
+        "tname_eng": "Etmadpur"
+      }
+    },
+    {
+      "district": {
+        "district_code_census": "146",
+        "district_name_hindi": "आगरा",
+        "district_name": "Agra"
+      },
+      "tehsil": {
+        "tehsil_code_census": "00769",
+        "tname": "फतेहाबाद",
+        "tname_eng": "Fatehabad"
+      }
+    },
+    {
+      "district": {
+        "district_code_census": "146",
+        "district_name_hindi": "आगरा",
+        "district_name": "Agra"
+      },
+      "tehsil": {
+        "tehsil_code_census": "00768",
+        "tname": "खेरागढ़",
+        "tname_eng": "Kheragarh"
+      }
+    },
+    {
+      "district": {
+        "district_code_census": "146",
+        "district_name_hindi": "आगरा",
+        "district_name": "Agra"
+      },
+      "tehsil": {
+        "tehsil_code_census": "00767",
+        "tname": "किरावली",
+        "tname_eng": "Kiraoli"
+      }
+    }
+  ],
+  "RESPONSE": true
+}
