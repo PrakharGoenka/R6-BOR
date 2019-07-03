@@ -1,10 +1,5 @@
-<%--
-    Document   : index
-    Created on : 27 Jun, 2019, 7:27:04 PM
-    Author     : rv
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,7 +8,7 @@
           content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
           >
     <title>
-      R6 Form
+      रजिस्टर  ६ फॉर्म
     </title>
     <link rel="icon" href="assets/bootstrap/css/icon.ico">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -24,39 +19,32 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+    <nav class="navbar navbar-dark navbar-expand-lg
+         fixed-top bg-white portfolio-navbar gradient"
+         >
       <div class="container">
-        <a class="navbar-brand logo" data-aos="fade" data-aos-delay="200" href="#">
+        <a class="navbar-brand logo" data-aos="fade" data-aos-delay="250" href="#">
           <img src="assets/img/BOR-Image.png">
-          Board Of Revenue
+          राजस्व परिषद, उत्तर प्रदेश
         </a>
-
-        <button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav">
-          <span class="sr-only">
-            Toggle navigation
-          </span>
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="nav navbar-nav ml-auto"></ul>
         </div>
-
       </div>
     </nav>
 
     <main class="page hire-me-page">
       <section class="portfolio-block hire-me">
-
         <div class="container">
           <div class="heading">
-            <h2 data-aos="zoom-in" data-aos-delay="250">R6 web-form</h2>
+            <h2 data-aos="flip-right" data-aos-delay="250">रजिस्टर ६ वेब-फॉर्म</h2>
           </div>
-
-          <form data-aos="zoom-out" data-aos-delay="30">
-            <div class="form-group text-center" data-aos="fade" data-aos-delay="25">
-              <label for="Mode Of Transfer" style="font-size: 30px;font-family: Lato, sans-serif;">
-                Mode Of Transfer
+          <form data-aos="zoom-in" data-aos-delay="350">
+            <div class="form-group text-center" data-aos="fade" data-aos-delay="250">
+              <label for="Mode Of Transfer"
+                     style="font-size: 30px;font-family: Lato, sans-serif;"
+                     >
+                हस्तांतरण की विधि
               </label>
             </div>
 
@@ -65,15 +53,16 @@
                 <div class="col-md-6 button">
                   <button
                     type="button"
-                    id="varasad"
+                    id="varasat"
                     onclick="document.getElementById('s-1').style.display = 'block';
                         document.getElementById('s-2').style.display = 'none'"
                     class="btn btn-primary btn-block"
                     type="submit"
                     >
-                    Varasad
+                    वरासत
                   </button>
                 </div>
+
                 <div class="col-md-6 button">
                   <button
                     type="button"
@@ -83,137 +72,158 @@
                     class="btn btn-primary btn-block"
                     type="submit"
                     >
-                    Dhara34
+                    धारा ३४
                   </button>
                 </div>
-              </div>
 
+              </div>
               <div class="form-row">
-                <div class="col-md-6 offset-3 button">
+                <div class="col-12 col-md-6 offset-0 m-auto button">
                   <button
                     type="button"
-                    onclick="document.getElementById('s-2').style.display = 'block';
+                    id="other"
+                    onclick="
+                        document.getElementById('s-2').style.display = 'block';
                         document.getElementById('s-1').style.display = 'none'"
-                    class="btn btn-outline-primary btn-block"
+                    class="btn btn-primary btn-block"
                     type="submit"
                     >
-                    Other
+                    अन्य
                   </button>
                 </div>
               </div>
-
             </div>
-
           </form>
-
         </div>
 
-        <form data-aos="flip-right" id="s-1" style="display:none" action="./response.jsp">
-          <div class="form-group">
-            <label for="subject">
-              To get Gaata Sankhya:
-            </label>
+        <div data-aos="flip-down" data-aos-delay="350" id="s-1" style="display:none">
+          <form  action="./response.jsp" method="POST">
 
-            <div id="jquery-script-menu">
-
+            <div class="form-group">
+              <label for="subject">
+                गाटा संख्या प्राप्त करने हेतु:
+              </label>
             </div>
-            <div class="jquery-script-clear"></div>
-          </div>
-          </div>
-          <main >
 
-            <div class="row">
+            <main >
+              <div class="row">
+                <div class="col-lg-6 col-lg-offset-3">
+                  <div class="form-group">
+                    <label for="first">जनपद</label>
+                    <select type="input" name = "District" id="first"
+                            class="form-control" role="listbox" required=""
+                            >
+                      <option value="0" selected="selected">जनपद चुने</option>
+                    </select>
+                  </div>
 
-              <div class="col-lg-6 col-lg-offset-3">
-                <div class="form-group">
-                  <label for="first">District</label>
-                  <select id="first" class="form-control" role="listbox">
-                    <option value="0" selected="selected">Select Option</option>
-                  </select>
+                  <div class="form-group">
+                    <label for="second">तहसील</label>
+                    <select type="input" name = "Tehsil" id="second"
+                            class="form-control" role="listbox"
+                            disabled="disabled" required=""
+                            >
+                      <option value="0" selected="selected">तहसील चुने</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="third">ग्राम</label>
+                    <select type="input" name="Village" id="third"
+                            class="form-control" role="listbox"
+                            disabled="disabled" required=""
+                            >
+                      <option value="0" selected="selected">ग्राम चुने</option>
+                    </select>
+                  </div>
+
+                  <input
+                    class="form-control" type="number" id="gata number"
+                    placeholder="गाटा संख्या(0-9999)"
+                    min="0" max="9999" required=""
+                    />
                 </div>
-                <div class="form-group">
-                  <label for="second">Tehesil</label>
-                  <select id="second" class="form-control" role="listbox" disabled="disabled">
-                    <option value="0" selected="selected">Select Option</option>
-                  </select>
+              </div>
+            </main>
+
+            <div class="form-group">
+              <label for="message">
+                जोड़े गए हिस्से का विवरण
+              </label>
+              <input type="text" name="DescShareAdded" class="form-control"
+                     id="message" required=""
+                     />
+            </div>
+
+            <div class="form-group">
+              <label for="message">
+                निकाले गए हिस्से  का विवरण
+              </label>
+              <input type="text" name="DescShareRemoved" class="form-control"
+                     id="message" required=""
+                     />
+            </div>
+
+            <div class="form-group">
+              <label for="email">
+                माल गुज़ारी(राजस्व)
+              </label>
+              <input id="MallGuzari" name="MallGuzari" class="form-control"
+                     type="text" required=""
+                     />
+            </div>
+
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col">
+                  <label for="email">
+                    आदेश संख्या
+                  </label>
+                  <input id="OrderNumber" name="OrderNumber" class="form-control"
+                         type="text" required=""
+                         />
                 </div>
-                <div class="form-group">
-                  <label for="third">Village</label>
-                  <select  id="third" class="form-control" role="listbox" disabled="disabled">
-                    <option value="0" selected="selected">Select Option</option>
-                  </select>
+
+                <div class="col-md-6">
+                  <label for="hire-date">
+                    दिनांक
+                  </label>
+                  <input name="Date" class="form-control" id="hire-date"
+                         type="date" required=""
+                         />
                 </div>
               </div>
             </div>
-          </main>
 
-
-
-          <div class="form-group">
-            <label for="message">
-              Description Of Share Added
-            </label>
-            <textarea class="form-control" id="message" required=""></textarea>
-          </div>
-
-          <div class="form-group">
-            <label for="message">
-              Description Of Share Removed
-            </label>
-            <textarea class="form-control" id="message" required=""></textarea>
-          </div>
-          <div class="form-group">
-            <label for="email">
-              Mall Guzari(Revenue)
-            </label>
-            <input class="form-control" type="text" required="">
-          </div>
-
-          <div class="form-group">
-            <div class="form-row">
-              <div class="col">
-                <label for="email">
-                  Order Number
-                </label>
-                <input class="form-control" type="text" required="">
-              </div>
-              <div class="col-md-6">
-                <label for="hire-date">
-                  Date
-                </label>
-                <input class="form-control" id="hire-date" type="date" required="">
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col">
+                  <label for="email">
+                    टिप्पणी
+                  </label>
+                  <input name="Remark" class="form-control" type="text"
+                         />
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="form-group">
-            <div class="form-row">
-              <div class="col">
-                <label for="email">
-                  Remark
-                </label>
-                <input class="form-control" type="text">
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-8 col-md-6 offset-0 m-auto button" id="submit">
+                  <button class="btn btn-primary btn-block" type="submit">
+                    जमा करें
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="form-group">
-            <div class="form-row">
-              <div class="col-md-6 offset-3 button">
-                <button class="btn btn-primary btn-block" type="submit">
-                  Submit
-                </button>
-              </div>
-            </div>
-          </div>
-        </form>
-
-
+          </form>
+        </div>
       </section>
 
       <section>
         <div>
-          <p class="para" id="s-2" style="display:none" >
-            Service Not Available!!!
+          <p class="para" id="s-2" style="display:none">
+            सेवा उपलब्ध नहीं है!!!
           </p>
         </div>
       </section>

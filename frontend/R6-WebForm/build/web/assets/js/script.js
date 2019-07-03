@@ -1,14 +1,16 @@
 
 $(document).ready(function () {
   // Default option
-  var option = '<option value="0" selected="selected">Select Option</option>';
+  var option = ['<option value="0" selected="selected">जनपद चुने</option>',
+    '<option value="0" selected="selected">तहसील चुने</option>',
+    '<option value="0" selected="selected">ग्राम चुने</option>'];
 
-  // Select each of the dropdowns
+  // Select each of the elements
   var dropDowns = [$('#first'), $('#second'), $('#third')];
   var firstDropDown = $('#first');
   var secondDropDown = $('#second');
   var thirdDropDown = $('#third');
-  var varasad = $('#varasad');
+  var varasat = $('#varasat');
   var dhara34 = $('#dhara34');
 
   // Hold selected option
@@ -21,7 +23,7 @@ $(document).ready(function () {
   var clearDropDown = function (arrayObj, startIndex) {
     $.each(arrayObj, function (index, value) {
       if (index >= startIndex) {
-        $(value).html(option);
+        $(value).html(option[index]);
       }
     });
   };
@@ -88,7 +90,7 @@ $(document).ready(function () {
     fillDropDowns(0, url);
   });
 
-  varasad.click(function () {
+  varasat.click(function () {
     var url = 'https://reqres.in/api/users?page=2';
     fillDropDowns(0, url);
   });
@@ -116,8 +118,6 @@ $(document).ready(function () {
   // Selection handler for third level dropdown
   thirdDropDown.on('change', function () {
     thirdSelection = thirdDropDown.val();
-
-    console.log('thirdSelection');
 
   });
 });
