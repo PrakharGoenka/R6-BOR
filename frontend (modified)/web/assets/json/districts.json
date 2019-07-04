@@ -1,0 +1,380 @@
+{
+  "DATA":
+          [
+            {
+              "district_code_census": "146",
+              "district_name_hindi": "आगरा",
+              "district_name": "Agra"
+            },
+            {
+              "district_code_census": "143",
+              "district_name_hindi": "अलीगढ़",
+              "district_name": "Aligarh"
+            },
+            {
+              "district_code_census": "178",
+              "district_name_hindi": "अम्बेदकरनगर",
+              "district_name": "Ambedkarnagar"
+            },
+            {
+              "district_code_census": "203",
+              "district_name_hindi": "अमेठी",
+              "district_name": "Amethi"
+            },
+            {
+              "district_code_census": "137",
+              "district_name_hindi": "अमरोहा",
+              "district_name": "Amroha"
+            },
+            {
+              "district_code_census": "162",
+              "district_name_hindi": "औरैया",
+              "district_name": "Auraya"
+            },
+            {
+              "district_code_census": "177",
+              "district_name_hindi": "अयोध्या",
+              "district_name": "Ayodhya"
+            },
+            {
+              "district_code_census": "191",
+              "district_name_hindi": "आजमगढ",
+              "district_name": "Azamgarh"
+            },
+            {
+              "district_code_census": "149",
+              "district_name_hindi": "बदांयू",
+              "district_name": "Badaun"
+            },
+            {
+              "district_code_census": "139",
+              "district_name_hindi": "बागपत",
+              "district_name": "Bagpat"
+            },
+            {
+              "district_code_census": "193",
+              "district_name_hindi": "बलिया",
+              "district_name": "Ballia"
+            },
+            {
+              "district_code_census": "182",
+              "district_name_hindi": "बलरामपुर",
+              "district_name": "Balrampur"
+            },
+            {
+              "district_code_census": "170",
+              "district_name_hindi": "बाँदा",
+              "district_name": "Banda"
+            },
+            {
+              "district_code_census": "176",
+              "district_name_hindi": "बाराबंकी",
+              "district_name": "Barabanki"
+            },
+            {
+              "district_code_census": "150",
+              "district_name_hindi": "बरेली",
+              "district_name": "Bareilly"
+            },
+            {
+              "district_code_census": "185",
+              "district_name_hindi": "बस्ती",
+              "district_name": "Basti"
+            },
+            {
+              "district_code_census": "180",
+              "district_name_hindi": "बहराइच",
+              "district_name": "Behraich"
+            },
+            {
+              "district_code_census": "134",
+              "district_name_hindi": "बिजनौर",
+              "district_name": "Bijnor"
+            },
+            {
+              "district_code_census": "142",
+              "district_name_hindi": "बुलन्द शहर",
+              "district_name": "Bulandshahar"
+            },
+            {
+              "district_code_census": "196",
+              "district_name_hindi": "चन्दौली",
+              "district_name": "Chandauli"
+            },
+            {
+              "district_code_census": "171",
+              "district_name_hindi": "चित्रकूट",
+              "district_name": "Chitrakoot"
+            },
+            {
+              "district_code_census": "190",
+              "district_name_hindi": "देवरिया",
+              "district_name": "Deoria"
+            },
+            {
+              "district_code_census": "201",
+              "district_name_hindi": "एटा",
+              "district_name": "Etah"
+            },
+            {
+              "district_code_census": "161",
+              "district_name_hindi": "इटावा",
+              "district_name": "Etawah"
+            },
+            {
+              "district_code_census": "159",
+              "district_name_hindi": "फर्रूखाबाद",
+              "district_name": "Farrukhabad"
+            },
+            {
+              "district_code_census": "172",
+              "district_name_hindi": "फतेहपुर",
+              "district_name": "Fatehpur"
+            },
+            {
+              "district_code_census": "147",
+              "district_name_hindi": "फिरोजाबाद",
+              "district_name": "Firozabad"
+            },
+            {
+              "district_code_census": "141",
+              "district_name_hindi": "गौतम बुद्ध नगर",
+              "district_name": "Gbnagar"
+            },
+            {
+              "district_code_census": "140",
+              "district_name_hindi": "गाजियाबाद",
+              "district_name": "Ghaziabad"
+            },
+            {
+              "district_code_census": "195",
+              "district_name_hindi": "गाजीपुर",
+              "district_name": "Ghazipur"
+            },
+            {
+              "district_code_census": "183",
+              "district_name_hindi": "गोंडा",
+              "district_name": "Gonda"
+            },
+            {
+              "district_code_census": "188",
+              "district_name_hindi": "गोरखपुर",
+              "district_name": "Gorakhpur"
+            },
+            {
+              "district_code_census": "168",
+              "district_name_hindi": "हमीरपुर",
+              "district_name": "Hamirpur"
+            },
+            {
+              "district_code_census": "204",
+              "district_name_hindi": "हापुड़",
+              "district_name": "Hapur"
+            },
+            {
+              "district_code_census": "155",
+              "district_name_hindi": "हरदोई",
+              "district_name": "Hardoi"
+            },
+            {
+              "district_code_census": "144",
+              "district_name_hindi": "हाथरस",
+              "district_name": "Hathras"
+            },
+            {
+              "district_code_census": "165",
+              "district_name_hindi": "जालौन",
+              "district_name": "Jalaun"
+            },
+            {
+              "district_code_census": "194",
+              "district_name_hindi": "जौनपुर",
+              "district_name": "Jaunpur"
+            },
+            {
+              "district_code_census": "166",
+              "district_name_hindi": "झांसी",
+              "district_name": "Jhansi"
+            },
+            {
+              "district_code_census": "160",
+              "district_name_hindi": "कन्नौज",
+              "district_name": "Kannauj"
+            },
+            {
+              "district_code_census": "163",
+              "district_name_hindi": "कानपुर देहात",
+              "district_name": "Kanpurdehat"
+            },
+            {
+              "district_code_census": "164",
+              "district_name_hindi": "कानपुर नगर",
+              "district_name": "Kanpurnagar"
+            },
+            {
+              "district_code_census": "202",
+              "district_name_hindi": "कासगंज",
+              "district_name": "Kasganj"
+            },
+            {
+              "district_code_census": "174",
+              "district_name_hindi": "कौशाम्बी",
+              "district_name": "Kaushambhi"
+            },
+            {
+              "district_code_census": "153",
+              "district_name_hindi": "खीरी",
+              "district_name": "Kheri"
+            },
+            {
+              "district_code_census": "189",
+              "district_name_hindi": "कुशीनगर",
+              "district_name": "Kushinagar"
+            },
+            {
+              "district_code_census": "167",
+              "district_name_hindi": "ललितपुर",
+              "district_name": "Lalitpur"
+            },
+            {
+              "district_code_census": "157",
+              "district_name_hindi": "लखनऊ",
+              "district_name": "Lucknow"
+            },
+            {
+              "district_code_census": "187",
+              "district_name_hindi": "महाराजगंज",
+              "district_name": "Maharajganj"
+            },
+            {
+              "district_code_census": "169",
+              "district_name_hindi": "महोबा",
+              "district_name": "Mahoba"
+            },
+            {
+              "district_code_census": "148",
+              "district_name_hindi": "मैनपुरी",
+              "district_name": "Mainpuri"
+            },
+            {
+              "district_code_census": "145",
+              "district_name_hindi": "मथुरा",
+              "district_name": "Mathura"
+            },
+            {
+              "district_code_census": "192",
+              "district_name_hindi": "मऊ",
+              "district_name": "Mau"
+            },
+            {
+              "district_code_census": "138",
+              "district_name_hindi": "मेरठ",
+              "district_name": "Meerut"
+            },
+            {
+              "district_code_census": "199",
+              "district_name_hindi": "मिर्जापुर",
+              "district_name": "Mirzapur"
+            },
+            {
+              "district_code_census": "135",
+              "district_name_hindi": "मुरादाबाद",
+              "district_name": "Moradabad"
+            },
+            {
+              "district_code_census": "133",
+              "district_name_hindi": "मुजफफर नगर",
+              "district_name": "Muzaffarnagar"
+            },
+            {
+              "district_code_census": "151",
+              "district_name_hindi": "पीलीभीत",
+              "district_name": "Pilibhit"
+            },
+            {
+              "district_code_census": "173",
+              "district_name_hindi": "प्रतापगढ",
+              "district_name": "Pratapgarh"
+            },
+            {
+              "district_code_census": "175",
+              "district_name_hindi": "प्रयागराज",
+              "district_name": "Prayagraj"
+            },
+            {
+              "district_code_census": "158",
+              "district_name_hindi": "रायबरेली",
+              "district_name": "Raebareli"
+            },
+            {
+              "district_code_census": "136",
+              "district_name_hindi": "रामपुर",
+              "district_name": "Rampur"
+            },
+            {
+              "district_code_census": "132",
+              "district_name_hindi": "सहारनपुर",
+              "district_name": "Saharanpur"
+            },
+            {
+              "district_code_census": "205",
+              "district_name_hindi": "सम्भल",
+              "district_name": "Sambhal"
+            },
+            {
+              "district_code_census": "152",
+              "district_name_hindi": "शाहजहांपुर",
+              "district_name": "Shahjahanpur"
+            },
+            {
+              "district_code_census": "206",
+              "district_name_hindi": "शामली",
+              "district_name": "Shamali"
+            },
+            {
+              "district_code_census": "181",
+              "district_name_hindi": "श्रावस्ती",
+              "district_name": "Shravasti"
+            },
+            {
+              "district_code_census": "184",
+              "district_name_hindi": "सिद्धार्थनगर",
+              "district_name": "Sidharthnagar"
+            },
+            {
+              "district_code_census": "154",
+              "district_name_hindi": "सीतापुर",
+              "district_name": "Sitapur"
+            },
+            {
+              "district_code_census": "186",
+              "district_name_hindi": "सन्तकबीर नगर",
+              "district_name": "Sknagar"
+            },
+            {
+              "district_code_census": "200",
+              "district_name_hindi": "सोनभद्र",
+              "district_name": "Sonbhadra"
+            },
+            {
+              "district_code_census": "198",
+              "district_name_hindi": "भदोही",
+              "district_name": "Srdnagar"
+            },
+            {
+              "district_code_census": "179",
+              "district_name_hindi": "सुल्तानपुर",
+              "district_name": "Sultanpur"
+            },
+            {
+              "district_code_census": "156",
+              "district_name_hindi": "उन्नाव",
+              "district_name": "Unnao"
+            },
+            {
+              "district_code_census": "197",
+              "district_name_hindi": "वाराणसी",
+              "district_name": "Varanasi"
+            }
+          ]
+}

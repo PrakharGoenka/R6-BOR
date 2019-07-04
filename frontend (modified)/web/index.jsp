@@ -98,7 +98,7 @@
 
         <div data-aos="flip-down" data-aos-delay="350" id="s-1" style="display:none">
           <form  action="./response.jsp" method="POST">
-
+            <input type="hidden" name="mode" id="mode" value="" />
             <div class="form-group">
               <label for="subject">
                 गाटा संख्या प्राप्त करने हेतु:

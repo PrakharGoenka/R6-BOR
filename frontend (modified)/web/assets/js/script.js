@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
   // Default option
   var option = ['<option value="0" selected="selected">जनपद चुने</option>',
@@ -17,7 +16,6 @@ $(document).ready(function () {
   var firstSelection = '';
   var secondSelection = '';
   var thirdSelection = '';
-  // Hold selected option;
 
   // Method to clear dropdowns down to a given level
   var clearDropDown = function (arrayObj, startIndex) {
@@ -43,83 +41,58 @@ $(document).ready(function () {
   };
 
   // Method to generate and append options
-  var generateOptions = function (element, data) {
+  var generateOptions = function (element, data, index) {
     var options = '';
     for (var i = 0; i < data.length; i++) {
-      options += '<option value="' + data[i].id + '">' + data[i].first_name + '</option>';
+      options += '<option value="' + data[i].code + '">' +
+              data[i].name + '</option>';
     }
     element.append(options);
   };
 
   // Method to fetch data from API to fill dropdowns
-  var fillDropDowns = (index, url) => {
+  var fillDropDowns = (index, url, obj) => {
     clearDropDown($('select'), index);
     disableDropDown($('select'), index);
 
-    $.ajax({
-      type: 'GET',
-      url: url,
-      contentType: 'application/json; charset=utf-8',
-
-      success: function (data) {
-        generateOptions(dropDowns[index], data.data);
-        enableDropDown(dropDowns[index]);
-      },
-
-      error: function (x, e) {
-        alert('server error occoured');
-        if (x.status == 0) {
-          alert('0 error');
-        } else if (x.status == 404) {
-          alert('404 error');
-        } else if (x.status == 500) {
-          alert('500 error');
-        } else if (e == 'parsererror') {
-          alert('Error.nParsing JSON Request failed.');
-        } else if (e == 'timeout') {
-          alert('Time out.');
-        } else {
-          alert(x.responseText);
-        }
-      }
+    console.log("DSA");
+    $.getJSON(url, function (data) {
+      console.log("DSA");
+      generateOptions(dropDowns[index], data[obj], index);
+      enableDropDown(dropDowns[index]);
     });
   };
 
   dhara34.click(function () {
     $("#mode").val("धारा ३४");
-    var url = 'https://reqres.in/api/users?page=2';
-    fillDropDowns(0, url);
+    var url = "./assets/js/districts.json";
+    var obj = "data";
+    fillDropDowns(0, url, obj);
   });
 
   varasat.click(function () {
     $("#mode").val("वरासत");
-    var url = 'https://reqres.in/api/users?page=2';
-    fillDropDowns(0, url);
+    var url = "./assets/js/districts.json";
+    var obj = "data";
+    fillDropDowns(0, url, obj);
   });
 
   // Selection handler for first level dropdown
   firstDropDown.on('change', function () {
-
     // Get selected option
     firstSelection = firstDropDown.val();
-
-    var url = 'https://reqres.in/api/users?page=2';
-    fillDropDowns(1, url);
+    var url = "./assets/js/tehsils.json";
+    var obj = firstSelection;
+    fillDropDowns(1, url, obj);
 
   });
 
   // Selection handler for second level dropdown
   secondDropDown.on('change', function () {
     secondSelection = secondDropDown.val();
-
-    var url = 'https://reqres.in/api/users?page=2';
-    fillDropDowns(2, url);
-
+    var url = "./assets/js/villages.json";
+    var obj = secondSelection;
+    fillDropDowns(2, url, obj);
   });
 
-  // Selection handler for third level dropdown
-  thirdDropDown.on('change', function () {
-    thirdSelection = thirdDropDown.val();
-
-  });
 });

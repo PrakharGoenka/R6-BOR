@@ -1,7 +1,5 @@
-
 <%@ page import="java.sql.*" %>
 <%@ page import="org.postgresql.Driver" %>
-
 <%@ page import="java.util.HashMap" %>
 <%@ page contentType="text/html" pageEncoding="UTF-8"%>
 
@@ -242,13 +240,16 @@
             <h3>  धन्यवाद  </h3>
             <h6>
               <strong>
-                आपका जवाब जमा कर लिया गया है। <br> <br>
+                आपका डेटा जमा कर लिया गया है। <br> <br>
                 आपका सीरियल नंबर है:<%= ind%>
               </strong>
             </h6>
           </div>
 
           <form style="width: 300px;" action="result.jsp" method="POST">
+            <strong>
+              पीडीऍफ़/प्रिंट आउट निकालें:
+            </strong>
             <input type="text" id="text-area-margin" class="form-control" style="height: 50px;" name="sno"/>
             <button class="btn btn-primary btn-block btn-sm text-center" type="submit">
               <i class="fa fa-file-pdf-o"></i>&nbsp;
