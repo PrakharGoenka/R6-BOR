@@ -86,11 +86,13 @@ $(document).ready(function () {
   };
 
   dhara34.click(function () {
+    $("#mode").val("धारा ३४");
     var url = 'https://reqres.in/api/users?page=2';
     fillDropDowns(0, url);
   });
 
   varasat.click(function () {
+    $("#mode").val("वरासत");
     var url = 'https://reqres.in/api/users?page=2';
     fillDropDowns(0, url);
   });

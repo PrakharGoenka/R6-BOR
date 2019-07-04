@@ -1,0 +1,40 @@
+.text-dark.mb-4 {
+  margin-top: 150px;
+}
+
+#nav-top {
+  background-color: blue;
+  height: 115px;
+}
+
+#print-button {
+  border-radius: 17px;
+}
+
+
+
+
+
+@media print{
+  #print-button { 
+    display: none;
+  }
+  #nav-top{
+  	display:none;
+  }
+  #wrapper{
+  	width:100%;
+  }
+  #dataTable{
+  	column-width:25px 25px 25px 250px 250px 25px 25px 25px 250px;
+  }
+  thead {display: table-header-group;}
+  @page{
+  	size: A4 landscape;
+ 	margin: 0.5px 0.5px 0.5px 0.5px;
+  }
+
+}
+
+
+
