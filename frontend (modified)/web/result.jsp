@@ -15,7 +15,7 @@
     String db_port = "5432";
     String db_name = "R6Database";
     String db_username = "postgres";
-    String db_password = "postgres";
+    String db_password = "sa@123";
 
     public void setDBUrlPort(String url, String port) {
 
@@ -93,23 +93,27 @@
 
         rs.next();
         int sno = rs.getInt(1);
-        String district = rs.getString(2);
-        String tehsil = rs.getString(3);
-        String village = rs.getString(4);
-        String share_added = rs.getString(5);
-        String share_removed = rs.getString(6);
-        String mall_guzari = rs.getString(7);
-        String order_number = rs.getString(8);
-        String date = rs.getString(9);
-        String remark = rs.getString(10);
+        String court_order = rs.getString(2);
+        String district = rs.getString(3);
+        String tehsil = rs.getString(4);
+        String village = rs.getString(5);
+        String share_added = rs.getString(6);
+        String share_removed = rs.getString(7);
+        String mall_guzari = rs.getString(8);
+        String aols = rs.getString(9);
+        String order_number = rs.getString(10);
+        String date = rs.getString(11);
+        String remark = rs.getString(12);
 
         record.put("sno", Integer.toString(sno));
+        record.put("court_order", court_order);
         record.put("district", district);
         record.put("tehsil", tehsil);
         record.put("village", village);
         record.put("share_added", share_added);
         record.put("share_removed", share_removed);
         record.put("mall_guzari", mall_guzari);
+        record.put("aols", aols);
         record.put("order_number", order_number);
         record.put("date", date);
         record.put("remark", remark);
@@ -175,17 +179,7 @@
               <div class="card-body" data-aos="flip-up" data-aos-delay="250">
                 <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
                   <table class="table dataTable my-0" id="dataTable">
-                    <!--   <col width="50px">
-                       <col width="50px">
-                       <col width="50px">
-                       <col width="250px">
-                       <col width="250px">
-                       <col width="50px">
-                       <col width="50px">
-                       <col width="50px">
-                       <col width="50px">
-                       <col width="250px">
-                    -->
+                   
                     <thead>
                       <tr>
                         <th>संख्या </th>
@@ -202,12 +196,12 @@
                     <tbody>
                       <tr>
                         <td><%= rs.get("sno")%></td>
-                        <td>धारा ३४</td>
+                        <td><%= rs.get("court_order")%></td>
                         <td>१२३४५६७८९१२३४५६७</td>
                         <td><%= rs.get("share_added")%>  </td>
                         <td> <%= rs.get("share_removed")%> </td>
                         <td><%= rs.get("mall_guzari")%></td>
-                        <td>७00 वर्ग फुट</td>
+                        <td><%= rs.get("aols")%></td>
                         <td><%= rs.get("order_number")%>----एवं--- <%= rs.get("date")%></td>
                         <td> <%= rs.get("remark")%></td>
                       </tr>

@@ -51,9 +51,10 @@
             <div class="form-group">
               <div class="form-row">
                 <div class="col-md-6 button">
+                    
                   <button
                     type="button"
-                    id="varasat"
+                    id="varasat" name="varasat"
                     onclick="document.getElementById('s-1').style.display = 'block';
                         document.getElementById('s-2').style.display = 'none'"
                     class="btn btn-primary btn-block"
@@ -61,12 +62,13 @@
                     >
                     वरासत
                   </button>
+                    
                 </div>
 
                 <div class="col-md-6 button">
                   <button
                     type="button"
-                    id="dhara34"
+                    id="dhara34" name="dhara34"
                     onclick="document.getElementById('s-1').style.display = 'block';
                         document.getElementById('s-2').style.display = 'none'"
                     class="btn btn-primary btn-block"
@@ -75,8 +77,10 @@
                     धारा ३४
                   </button>
                 </div>
+                  
 
               </div>
+                
               <div class="form-row">
                 <div class="col-12 col-md-6 offset-0 m-auto button">
                   <button
@@ -98,14 +102,14 @@
 
         <div data-aos="flip-down" data-aos-delay="350" id="s-1" style="display:none">
           <form  action="./response.jsp" method="POST">
-            <input type="hidden" name="mode" id="mode" value="" />
+            <input type="hidden" name="mode" id="mode" value="temp" />
             <div class="form-group">
               <label for="subject">
                 गाटा संख्या प्राप्त करने हेतु:
               </label>
             </div>
 
-            <main >
+            <main>
               <div class="row">
                 <div class="col-lg-6 col-lg-offset-3">
                   <div class="form-group">
@@ -136,12 +140,15 @@
                       <option value="0" selected="selected">ग्राम चुने</option>
                     </select>
                   </div>
-
+                    
+                  <div>
+                      <label>(0-9999)</label>
                   <input
                     class="form-control" type="number" id="gata number"
                     placeholder="गाटा संख्या(0-9999)"
                     min="0" max="9999" required=""
                     />
+                  </div>
                 </div>
               </div>
             </main>
@@ -165,10 +172,19 @@
             </div>
 
             <div class="form-group">
-              <label for="email">
+              <label for="message">
                 माल गुज़ारी(राजस्व)
               </label>
               <input id="MallGuzari" name="MallGuzari" class="form-control"
+                     type="text" required=""
+                     />
+            </div>
+            
+            <div class="form-group">
+              <label for="message">
+                हस्तांतरण के हिस्से का क्षेत्र
+              </label>
+              <input id="AOLS" name="AOLS" class="form-control"
                      type="text" required=""
                      />
             </div>
@@ -176,7 +192,7 @@
             <div class="form-group">
               <div class="form-row">
                 <div class="col">
-                  <label for="email">
+                  <label for="message">
                     आदेश संख्या
                   </label>
                   <input id="OrderNumber" name="OrderNumber" class="form-control"
@@ -185,10 +201,10 @@
                 </div>
 
                 <div class="col-md-6">
-                  <label for="hire-date">
+                  <label for="date">
                     दिनांक
                   </label>
-                  <input name="Date" class="form-control" id="hire-date"
+                  <input name="Date" class="form-control" id="date"
                          type="date" required=""
                          />
                 </div>
@@ -211,7 +227,7 @@
               <div class="form-row">
                 <div class="col-8 col-md-6 offset-0 m-auto button" id="submit">
                   <button class="btn btn-primary btn-block" type="submit">
-                    जमा करें
+                    सुरक्षित करें
                   </button>
                 </div>
               </div>

@@ -13,7 +13,7 @@
     String db_port = "5432";
     String db_name = "R6Database";
     String db_username = "postgres";
-    String db_password = "postgres";
+    String db_password = "sa@123";
 
     public void setDBUrlPort(String url, String port) {
 
@@ -88,38 +88,43 @@
         Share_Added
         Share_Removed
         Mall_Guzari
+        AOLS
         order_number
         date
         Remark
 
        */
+      String court_order = recordMap.get("court_order");
       String district = recordMap.get("district");
       String tehsil = recordMap.get("tehsil");
       String village = recordMap.get("village");
       String share_added = recordMap.get("share_added");
       String share_removed = recordMap.get("share_removed");
       String mall_guzari = recordMap.get("mall_guzari");
+      String aols = recordMap.get("aols");
       String order_number = recordMap.get("order_number");
       String date = recordMap.get("date");
       String remark = recordMap.get("remark");
 
       Connection conn = DatabaseConnect();
-      String SQL = "INSERT INTO register6 (district, tehsil, village, share_added, share_removed, mall_guzari, order_number, date, remark)"
-              + "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING sno;";
+      String SQL = "INSERT INTO register6 (court_order,district, tehsil, village, share_added, share_removed, mall_guzari, aols, order_number, date, remark)"
+              + "VALUES(?,?, ?, ?, ?, ?, ?, ?, ?, ?,?) RETURNING sno;";
       long ind = -1;
       try {
 
         PreparedStatement pstmt = conn.prepareStatement(SQL);
-
-        pstmt.setString(1, district);
-        pstmt.setString(2, tehsil);
-        pstmt.setString(3, village);
-        pstmt.setString(4, share_added);
-        pstmt.setString(5, share_removed);
-        pstmt.setString(6, mall_guzari);
-        pstmt.setString(7, order_number);
-        pstmt.setString(8, date);
-        pstmt.setString(9, remark);
+        
+        pstmt.setString(1, court_order);
+        pstmt.setString(2, district);
+        pstmt.setString(3, tehsil);
+        pstmt.setString(4, village);
+        pstmt.setString(5, share_added);
+        pstmt.setString(6, share_removed);
+        pstmt.setString(7, mall_guzari);
+        pstmt.setString(8, order_number);
+        pstmt.setString(9, aols);
+        pstmt.setString(10, date);
+        pstmt.setString(11, remark);
 
         ind = insertData(pstmt);
 
@@ -150,12 +155,14 @@
       Connection conn = DatabaseConnect();
       String SQL = "CREATE TABLE register6 ("
               + "sno SERIAL,"
+              + "court_order varchar(100),"
               + "District varchar(100),"
               + "Tehsil varchar(100),"
               + "Village varchar(100),"
               + "share_Added varchar(100),"
               + "share_removed varchar(100),"
               + "mall_guzari varchar(100),"
+              + "aols varchar(100),"
               + "order_number varchar(100),"
               + "date varchar(100),"
               + "remark varchar(100)"
@@ -217,40 +224,53 @@
       </div>
     </nav>
 
-    <% HashMap<String, String> h = new HashMap();
-      out.print(request.getParameter("District"));
-      h.put("district", request.getParameter("District"));
-      h.put("tehsil", request.getParameter("Tehsil"));
-      h.put("village", request.getParameter("Village"));
-      h.put("share_added", request.getParameter("DescShareAdded"));
-      h.put("share_removed", request.getParameter("DescShareRemoved"));
-      h.put("mall_guzari", request.getParameter("MallGuzari"));
-      h.put("order_number", request.getParameter("OrderNumber"));
-      h.put("date", request.getParameter("Date"));
-      h.put("remark", request.getParameter("Remark"));
-      out.print(h);
-      PostgresDB postgres = new PostgresDB();
-      long ind = postgres.insertRecord(h);
+    <% long ind = -1;
+        if(request.getParameter("District") != null){
+        HashMap<String, String> h = new HashMap();
+        out.print(request.getParameter("District"));
+//        String m = request.getParameter("mode");
+//        if(m == "1")
+//            m = "वरासत";
+//        else
+//            m = "धारा ३४";
+        h.put("court_order", request.getParameter("mode"));
+        h.put("district", request.getParameter("District"));
+        h.put("tehsil", request.getParameter("Tehsil"));
+        h.put("village", request.getParameter("Village"));
+        h.put("share_added", request.getParameter("DescShareAdded"));
+        h.put("share_removed", request.getParameter("DescShareRemoved"));
+        h.put("mall_guzari", request.getParameter("MallGuzari"));
+        h.put("aols", request.getParameter("AOLS"));
+        h.put("order_number", request.getParameter("OrderNumber"));
+        h.put("date", request.getParameter("Date"));
+        h.put("remark", request.getParameter("Remark"));
+        out.print(h);
+        PostgresDB postgres = new PostgresDB();
+        ind = postgres.insertRecord(h);
+    }
+        
     %>
 
     <main class="page hire-me-page">
       <section class="portfolio-block hire-me">
         <div class="container">
-          <div id="print-pdf-heading" class="heading" >
-            <h3>  धन्यवाद  </h3>
-            <h6>
-              <strong>
-                आपका डेटा जमा कर लिया गया है। <br> <br>
-                आपका सीरियल नंबर है:<%= ind%>
-              </strong>
-            </h6>
-          </div>
-
+          <% if(request.getParameter("District") != null){ %>
+              <div id="print-pdf-heading" class="heading" >
+                <h3>  धन्यवाद  </h3>
+                <h6>
+                  <strong>
+                    आपका डेटा सुरक्षित कर लिया गया है। <br> <br>
+                    आपका सीरियल नंबर है: <%= ind%>
+                  </strong>
+                 
+                </h6>
+              </div>
+              <%} %>
           <form style="width: 300px;" action="result.jsp" method="POST">
             <strong>
-              पीडीऍफ़/प्रिंट आउट निकालें:
+      
             </strong>
-            <input type="text" id="text-area-margin" class="form-control" style="height: 50px;" name="sno"/>
+            <input placeholder="अपना सीरियल नंबर यहाँ डालें" type="text" id="text-area-margin" class="form-control" style="height: 50px;" name="sno"/>
             <button class="btn btn-primary btn-block btn-sm text-center" type="submit">
               <i class="fa fa-file-pdf-o"></i>&nbsp;
               प्रिंट-पीडीऍफ़
