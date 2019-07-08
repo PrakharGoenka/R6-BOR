@@ -55,23 +55,21 @@ $(document).ready(function () {
     clearDropDown($('select'), index);
     disableDropDown($('select'), index);
 
-    console.log("DSA");
     $.getJSON(url, function (data) {
-      console.log("DSA");
       generateOptions(dropDowns[index], data[obj], index);
       enableDropDown(dropDowns[index]);
     });
   };
 
   dhara34.click(function () {
-    $("#mode").val("धारा ३४");
+    $('#mode').val("Dhaara 34");
     var url = "./assets/js/districts.json";
     var obj = "data";
     fillDropDowns(0, url, obj);
   });
 
   varasat.click(function () {
-    $("#mode").val("वरासत");
+    $('#mode').val("Varasat");
     var url = "./assets/js/districts.json";
     var obj = "data";
     fillDropDowns(0, url, obj);
@@ -96,3 +94,8 @@ $(document).ready(function () {
   });
 
 });
+
+
+
+
+
