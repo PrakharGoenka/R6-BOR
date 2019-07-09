@@ -13,7 +13,7 @@
     String db_port = "5432";
     String db_name = "R6Database";
     String db_username = "postgres";
-    String db_password = "sa@123";
+    String db_password = "postgres";
 
     public void setDBUrlPort(String url, String port) {
 
@@ -113,7 +113,7 @@
       try {
 
         PreparedStatement pstmt = conn.prepareStatement(SQL);
-        
+
         pstmt.setString(1, court_order);
         pstmt.setString(2, district);
         pstmt.setString(3, tehsil);
@@ -225,7 +225,7 @@
     </nav>
 
     <% long ind = -1;
-        if(request.getParameter("District") != null){
+      if (request.getParameter("District") != null) {
         HashMap<String, String> h = new HashMap();
         out.print(request.getParameter("District"));
 //        String m = request.getParameter("mode");
@@ -246,29 +246,30 @@
         h.put("remark", request.getParameter("Remark"));
         out.print(h);
         PostgresDB postgres = new PostgresDB();
+        postgres.InitializeDatabase();
         ind = postgres.insertRecord(h);
-    }
-        
+      }
+
     %>
 
     <main class="page hire-me-page">
       <section class="portfolio-block hire-me">
         <div class="container">
-          <% if(request.getParameter("District") != null){ %>
-              <div id="print-pdf-heading" class="heading" >
-                <h3>  धन्यवाद  </h3>
-                <h6>
-                  <strong>
-                    आपका डेटा सुरक्षित कर लिया गया है। <br> <br>
-                    आपका सीरियल नंबर है: <%= ind%>
-                  </strong>
-                 
-                </h6>
-              </div>
-              <%} %>
+          <% if (request.getParameter("District") != null) {%>
+          <div id="print-pdf-heading" class="heading" >
+            <h3>  धन्यवाद  </h3>
+            <h6>
+              <strong>
+                आपका डेटा सुरक्षित कर लिया गया है। <br> <br>
+                आपका सीरियल नंबर है: <%= ind%>
+              </strong>
+
+            </h6>
+          </div>
+          <%}%>
           <form style="width: 300px;" action="result.jsp" method="POST">
             <strong>
-      
+
             </strong>
             <input placeholder="अपना सीरियल नंबर यहाँ डालें" type="text" id="text-area-margin" class="form-control" style="height: 50px;" name="sno"/>
             <button class="btn btn-primary btn-block btn-sm text-center" type="submit">

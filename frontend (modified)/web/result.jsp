@@ -15,7 +15,7 @@
     String db_port = "5432";
     String db_name = "R6Database";
     String db_username = "postgres";
-    String db_password = "sa@123";
+    String db_password = "postgres";
 
     public void setDBUrlPort(String url, String port) {
 
@@ -153,9 +153,13 @@
   </head>
 
   <body id="page-top">
-    <% int sno = Integer.parseInt(request.getParameter("sno"));
+    <%
+      String sno = request.getParameter("sno");
+      if (sno == null) { %>
+    <jsp:forward page = "response.jsp" />
+    <% }
       PostgresDB postgres = new PostgresDB();
-      HashMap rs = postgres.retrieveRecord(sno);%>
+      HashMap rs = postgres.retrieveRecord(Integer.parseInt(sno));%>
 
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-primary portfolio-navbar gradient" id="nav-top">
       <div class="container-fluid">
@@ -175,11 +179,13 @@
               <div class="card-header py-3">
                 <p class="text-primary m-0 font-weight-bold" data-aos="zoom-in" data-aos-delay="200">कोर्ट के आदेश से संबंधित जानकारी</p>
               </div>
-
+              <% if (rs.get("sno") == null) {
+                  out.print("कृपया सीरियल नंबर जांचे");
+                } else {%>
               <div class="card-body" data-aos="flip-up" data-aos-delay="250">
                 <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
                   <table class="table dataTable my-0" id="dataTable">
-                   
+
                     <thead>
                       <tr>
                         <th>संख्या </th>
@@ -212,6 +218,7 @@
                   </table>
                 </div>
               </div>
+              <% }%>
             </div>
           </div>
         </div>
